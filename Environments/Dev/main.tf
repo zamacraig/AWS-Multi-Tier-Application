@@ -1,10 +1,10 @@
 module "network" {
   source = "../../Modules/network"
 
-  vpc_name           = "dev-vpc"
-  cidr_block         = "10.0.0.0/16"
-  public_subnet_cidr = "10.0.1.0/24"
-  availability_zone  = var.availability_zone
+  public_subnet_port = var.public_subnet_port
+  private_subnet_port = var.private_subnet_port
+  sns_email = var.sns_email
+  vpc_name = "3-Tier Application"
 }
 
 module "ecs_cluster" {
@@ -22,8 +22,8 @@ module "ecs_cluster" {
   image            = "123456789012.dkr.ecr.us-east-1.amazonaws.com/my-repo:latest"
 
   desired_count    = 0
-  subnets          = module.network.subnet_ids
-  security_groups  = [module.network.security_group_id]
+  subnets          = module.network.public_subnet_ids
+  security_groups  = [module.network.private_security_group_id]
   assign_public_ip = false
 }
 

@@ -1,8 +1,8 @@
 terraform {
     backend "s3" {
-        bucket = "zamacraig-terraform-backend"
-        key = "terraform/terraform.tfstate"
-        region = "us-east-1"
+        bucket = "zamacraig-terraform-backend" #var.s3_backend_bucket
+        key = "3-tier-application/terraform.tfstate" #var.s3_backend_key
+        region = "us-east-1" #var.region
     }
 }
 
