@@ -28,12 +28,26 @@ Follow these steps to deploy the application:
    git clone https://github.com/zamacraig/AWS-3-tier-application.git
    cd AWS-3-tier-application
 
+2. Initialize the Terraform configuration:
+
+   ```bash
+   terraform init
+
+3. Apply the Terraform configuration:
+
+   ```bash
+   terraform apply
+
+4. Confirm the changes and wait for the resources to be created.
+
 ## Usage
 Once the application is deployed, you can access the web interface using the ELB URL. The application handles user requests, processes business logic, and interacts with the database.
 
 ## Cleanup
 To destroy the infrastructure and clean up resources, run:
-  terraform destroy
+
+   ```bash
+      terraform destroy
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
