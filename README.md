@@ -45,9 +45,10 @@ Once the application is deployed, you can access the web interface using the ELB
 
 ## Cleanup
 To destroy the infrastructure and clean up resources, run:
-
+   
    ```bash
-      terraform destroy
+   terraform destroy
+   ```
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
