@@ -1,9 +1,8 @@
-# AWS-3-tier-application
+# AWS-2-tier-application
 
 ## Overview
 This project demonstrates the deployment of a 3-tier architecture application on AWS. The architecture consists of the following tiers:
-- **Presentation Tier**: User interface layer implemented using a web server.
-- **Application Tier**: Business logic layer implemented using application servers.
+- **Presentation Tier and Application Tier**: Implements the business logic and user interface layer
 - **Data Tier**: Database layer implemented using a database server.
 
 ## Architecture
